@@ -1,0 +1,7 @@
+FROM node:16-alpine
+WORKDIR /app
+COPY simple-package.json package.json
+RUN npm install
+COPY simple-server.js server.js
+EXPOSE 8080
+CMD ["npm", "start"] 

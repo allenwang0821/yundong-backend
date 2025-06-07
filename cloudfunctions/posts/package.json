@@ -1,0 +1,9 @@
+{
+  "name": "posts",
+  "version": "1.0.0",
+  "description": "动态发布和管理云函数",
+  "main": "index.js",
+  "dependencies": {
+    "@cloudbase/node-sdk": "^2.8.2"
+  }
+} 

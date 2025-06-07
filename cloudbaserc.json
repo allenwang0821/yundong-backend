@@ -1,0 +1,54 @@
+{
+  "envId": "yundong-backend-3gyx4mzr0c83f74f",
+  "functionRoot": "./cloudfunctions",
+  "functions": [
+    {
+      "name": "user-login",
+      "timeout": 30,
+      "runtime": "Nodejs16.13",
+      "memory": 256
+    },
+    {
+      "name": "user-profile",
+      "timeout": 30,
+      "runtime": "Nodejs16.13", 
+      "memory": 256
+    },
+    {
+      "name": "user-follow",
+      "timeout": 30,
+      "runtime": "Nodejs16.13",
+      "memory": 256
+    },
+    {
+      "name": "posts",
+      "timeout": 30,
+      "runtime": "Nodejs16.13",
+      "memory": 512
+    },
+    {
+      "name": "messages",
+      "timeout": 30,
+      "runtime": "Nodejs16.13",
+      "memory": 256
+    },
+    {
+      "name": "search",
+      "timeout": 30,
+      "runtime": "Nodejs16.13",
+      "memory": 256
+    },
+    {
+      "name": "collections",
+      "timeout": 30,
+      "runtime": "Nodejs16.13",
+      "memory": 256
+    },
+    {
+      "name": "activities",
+      "timeout": 30,
+      "runtime": "Nodejs16.13",
+      "memory": 256
+    }
+  ]
+} 

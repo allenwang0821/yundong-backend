@@ -1,0 +1,31 @@
+{
+  "envId": "yundong-backend-3gyx4mzr0c83f74f",
+  "cloudbaserc": {
+    "framework": {
+      "name": "yundong-backend",
+      "plugins": {
+        "container": {
+          "use": "@cloudbase/framework-plugin-container",
+          "inputs": {
+            "serviceName": "yundong-backend-v2",
+            "servicePath": "./",
+            "dockerfilePath": "./Dockerfile",
+            "buildDir": "./",
+            "containerPort": 8080,
+            "minNum": 0,
+            "maxNum": 10,
+            "cpu": 0.25,
+            "mem": 0.5,
+            "environments": {
+              "TCB_ENV": "yundong-backend-3gyx4mzr0c83f74f",
+              "NODE_ENV": "production",
+              "PORT": "8080"
+            },
+            "customLogs": "stdout",
+            "initialDelaySeconds": 3
+          }
+        }
+      }
+    }
+  }
+} 

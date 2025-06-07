@@ -1,0 +1,15 @@
+{
+  "name": "yundong-backend-cloudfunctions",
+  "version": "1.0.0",
+  "description": "运动搭子App云函数",
+  "main": "index.js",
+  "dependencies": {
+    "@cloudbase/node-sdk": "^2.8.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["cloudbase", "sports", "social"],
+  "author": "运动搭子团队",
+  "license": "MIT"
+} 

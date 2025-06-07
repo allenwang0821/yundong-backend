@@ -1,0 +1,35 @@
+name: Deploy to CloudBase
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Install CloudBase CLI
+      run: npm install -g @cloudbase/cli
+      
+    - name: Deploy to CloudBase
+      env:
+        CLOUDBASE_SECRET_ID: ${{ secrets.CLOUDBASE_SECRET_ID }}
+        CLOUDBASE_SECRET_KEY: ${{ secrets.CLOUDBASE_SECRET_KEY }}
+      run: |
+        tcb login --apiKeyId $CLOUDBASE_SECRET_ID --apiKey $CLOUDBASE_SECRET_KEY
+        tcb hosting deploy . -e yundong-backend-3gyx4mzr0c83f74f 
